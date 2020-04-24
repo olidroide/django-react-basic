@@ -1,16 +1,5 @@
 {
-    "files.autoSave": "afterDelay",
-    "editor.tabSize": 2,
-    "window.zoomLevel": 0,
     "editor.formatOnSave": true,
-    "editor.rulers": [
-        120
-    ],
-    "editor.renderWhitespace": "all",
-    "editor.renderControlCharacters": true,
-    "workbench.editor.enablePreview": true,
-    "editor.fontLigatures": true,
-    "editor.wordWrap": "on",
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.formatOnSave": true
@@ -22,6 +11,16 @@
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
+    "[python]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true,
+            "source.fixAll": true
+        }
+    },
+    "python.linting.pylintEnabled": true,
+    "python.linting.pylintArgs": [
+        "--enable=W0614"
+    ],
     "python.pythonPath": "venv/bin/python",
     "python.formatting.provider": "none",
     "files.exclude": {

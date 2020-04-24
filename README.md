@@ -3,13 +3,18 @@ Based in blog post: https://www.valentinog.com/blog/drf/
 ```
 sudo apt install npm
 
+
 mkdir test_django_react
 cd test_django_react/
 python3 -m venv venv
 source venv/bin/activate
 pip install django
+pip install isort
+
 django-admin startproject configuration .
 django-admin startapp core
+django-admin startapp api
+
 cd test_django_react/
 
 pip install coverage
