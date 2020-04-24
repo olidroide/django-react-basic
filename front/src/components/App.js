@@ -1,5 +1,36 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
+// import { observable, action } from "mobx";
+
+// class PokemonModel {
+//   @observable pokemons = [];
+
+//   @action addPokemon(pokemon) {
+//     this.pokemons.push({
+//       id: uuid(),
+//       ...pokemon,
+//     });
+//   }
+// }
+
+class ShowList extends React.Component {
+  render() {
+    return (
+      <div>
+        <h3> Leads </h3>
+        <ul>
+          {this.props.leads.map((lead) => {
+            return (
+              <li key={lead.id}>
+                {lead.name} - {lead.email}
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    );
+  }
+}
 
 class App extends Component {
   constructor(props) {
@@ -32,21 +63,12 @@ class App extends Component {
   }
 
   render() {
-    return (
-      <ul>
-        {this.state.data.map((contact) => {
-          return (
-            <li key={contact.id}>
-              {contact.name} - {contact.email}
-            </li>
-          );
-        })}
-      </ul>
-    );
+    return <ShowList leads={this.state.data} />;
   }
 }
 
 export default App;
+// export default PokemonModel;
 
 const container = document.getElementById("app");
 container ? render(<App />, container) : false;
