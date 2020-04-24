@@ -133,11 +133,11 @@ dmypy.json
 # Edit at https://www.gitignore.io/?templates=code,react,django,python,pycharm+all
 
 ### Code ###
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
+# .vscode/*
+# !.vscode/settings.json
+# !.vscode/tasks.json
+# !.vscode/launch.json
+# !.vscode/extensions.json
 
 ### Django ###
 *.log
