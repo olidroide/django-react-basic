@@ -15,6 +15,9 @@ django-admin startproject configuration .
 django-admin startapp core
 django-admin startapp api
 
+python manage.py makemigrations
+python manage.py migrate
+
 cd test_django_react/
 
 pip install coverage
@@ -75,7 +78,12 @@ module.exports = {
 ```
 
 ```
+npm install -g npm
 npm run dev
 cd ..
-python manage.py runserver
+pip install -i https://pypi.python.org/simple/ --upgrade -r requirements.txt
+python manage.py makemigrations
+python manage.py migrate
+python manage.py collectstatic --noinput
+python manage.py run_async_server
 ```
