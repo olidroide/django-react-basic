@@ -1,4 +1,4 @@
 pip==21.0.1
-Django==3.1.7
+Django==3.1.12
 uvicorn==0.13.4
 coverage==5.5
