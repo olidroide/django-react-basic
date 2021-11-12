@@ -1,6 +1,5 @@
 import json
 import uuid
-from typing import Iterable
 
 from asgiref.sync import sync_to_async
 from django.core.handlers.asgi import ASGIRequest
