@@ -1,9 +1,13 @@
 import os
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "(2gyvt+ptbxs#=0#s6=zu#yqz@2a_r6%4l)_lyk86txm8x_%a1"
+SECRET_KEY = str(os.getenv("SECRET_KEY"))
 
 DEBUG = True
 

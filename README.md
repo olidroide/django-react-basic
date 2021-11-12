@@ -1,5 +1,13 @@
 Based in blog post: https://www.valentinog.com/blog/drf/
 
+# Required packages
+
+- Python3
+- pip
+- npm
+
+## How this project was build?
+
 ```
 sudo apt install npm
 
@@ -77,6 +85,18 @@ module.exports = {
 };
 ```
 
+# Steps to run
+
+## .env file
+
+Ensure you have `.env` file in root folder. Required keys:
+
+```
+SECRET_KEY='xxxxxxxx'
+```
+
+Then you can run it step by step with:
+
 ```
 npm install -g npm
 npm run dev
@@ -86,4 +106,10 @@ python manage.py makemigrations
 python manage.py migrate
 python manage.py collectstatic --noinput
 python manage.py run_async_server
+```
+
+or use `make`
+
+```
+make runserver
 ```
